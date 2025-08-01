@@ -1,16 +1,13 @@
-const express = require('express');
-const cors = require('cors');
+import express from "express"
+import cors from "cors"
+
+import userRouter from "./routes/index.js"
 
 const app = express();
 app.use(cors());
+app.use(express.json())
 
-app.get('/api/intern', (req, res) => {
-  res.json({
-    name: "Aadi Pawar",
-    referralCode: "aadipawar2025",
-    totalDonations: 55555  //  updated value
-  });
-});
+app.use('/api', userRouter)
 
 
 const PORT = process.env.PORT || 3000;
