@@ -8,9 +8,10 @@ app.get('/api/intern', (req, res) => {
   res.json({
     name: "Aadi Pawar",
     referralCode: "aadipawar2025",
-    totalDonations: 12345
+    totalDonations: 55555  //  updated value
   });
 });
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
